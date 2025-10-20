@@ -23,11 +23,7 @@ const Home = () => {
     },
   ];
 
-  const leaders = [
-    { name: "Midad Khan", role: "Founder & CEO" },
-    { name: "Sajidur Rahman", role: "COO" },
-    { name: "Safwan Nohash", role: "Managing Director" },
-  ];
+  const founder = { name: "Midad Khan", role: "Founder & CEO" };
 
   return (
     <div className="min-h-screen">
@@ -174,18 +170,27 @@ const Home = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Leadership</h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          {leaders.map((leader) => (
-            <Card key={leader.name} className="text-center hover:shadow-[var(--shadow-accent-glow)] transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent mx-auto mb-4 flex items-center justify-center">
-                  <Users className="h-12 w-12 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{leader.name}</h3>
-                <p className="text-muted-foreground">{leader.role}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-w-md mx-auto mb-16">
+          <Card className="text-center hover:shadow-[var(--shadow-accent-glow)] transition-all duration-300">
+            <CardContent className="p-8">
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent mx-auto mb-4 flex items-center justify-center">
+                <Users className="h-12 w-12 text-primary-foreground" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">{founder.name}</h3>
+              <p className="text-muted-foreground">{founder.role}</p>
+            </CardContent>
+          </Card>
+        </div>
+        
+        {/* Founder's Vision */}
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8 md:p-12 border border-primary/20">
+            <h3 className="text-2xl font-bold mb-6 text-center text-accent">Founder's Vision</h3>
+            <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic text-center">
+              "At MNEX Group, we don't just build technology—we engineer the future. Our mission is to empower innovators, creators, and visionaries to transform bold ideas into reality. Through relentless innovation and collaboration, we're shaping a world where technology and creativity converge to solve tomorrow's challenges today."
+            </blockquote>
+            <p className="text-center mt-6 text-muted-foreground font-semibold">— Midad Khan</p>
+          </div>
         </div>
       </section>
 
