@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-tech.jpg";
 import rdLabImage from "@/assets/rd-lab.jpg";
+import mnexLogo from "@/assets/mnex-logo.png";
 
 const Home = () => {
   const subsidiaries = [
@@ -38,6 +39,13 @@ const Home = () => {
 
         <div className="relative container mx-auto px-4 text-center z-10">
           <div className="animate-fade-in">
+            <div className="mb-8 flex justify-center">
+              <img 
+                src={mnexLogo} 
+                alt="MNEX Group Logo" 
+                className="w-64 md:w-96 lg:w-[500px] floating silver-glow perspective-card opacity-90 hover:opacity-100 transition-opacity duration-300"
+              />
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 liquid-silver bg-clip-text text-transparent drop-shadow-2xl">
               Engineering the Future of Technology
             </h1>
