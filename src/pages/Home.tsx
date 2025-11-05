@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-tech.jpg";
 import rdLabImage from "@/assets/rd-lab.jpg";
-import mnexLogo from "@/assets/mnex-logo.png";
 
 const Home = () => {
   const subsidiaries = [
@@ -39,14 +38,7 @@ const Home = () => {
 
         <div className="relative container mx-auto px-4 text-center z-10">
           <div className="animate-fade-in">
-            <div className="mb-8 flex justify-center">
-              <img 
-                src={mnexLogo} 
-                alt="MNEX Group Logo" 
-                className="w-64 md:w-96 lg:w-[500px] floating silver-glow perspective-card opacity-90 hover:opacity-100 transition-opacity duration-300"
-              />
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 liquid-silver bg-clip-text text-transparent drop-shadow-2xl">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground drop-shadow-2xl">
               Engineering the Future of Technology
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -88,7 +80,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6 silver-gradient bg-clip-text text-transparent">MNEX R&D — Powering Innovation</h2>
+              <h2 className="text-4xl font-bold mb-6 text-foreground">MNEX R&D — Powering Innovation</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 MNEX R&D is the engine behind all subsidiaries, prototyping SaaS platforms, AI
                 solutions, and creative tools. Collaborating with students, engineers, and designers,
@@ -122,7 +114,7 @@ const Home = () => {
             <Card key={sub.name} className={`group hover:shadow-[var(--shadow-glow)] transition-all duration-300 liquid-glass perspective-card ${index === 0 ? 'floating' : ''}`}>
               <CardContent className="p-8">
                 <div className="mb-4 silver-glow inline-block p-3 rounded-lg">{sub.icon}</div>
-                <h3 className="text-2xl font-bold mb-3 group-hover:silver-gradient group-hover:bg-clip-text group-hover:text-transparent transition-all">
+                <h3 className="text-2xl font-bold mb-3 text-foreground transition-all">
                   {sub.name}
                 </h3>
                 <p className="text-muted-foreground mb-4">{sub.description}</p>
@@ -186,7 +178,7 @@ const Home = () => {
               <div className="w-24 h-24 rounded-full silver-glow mx-auto mb-4 flex items-center justify-center">
                 <Users className="h-12 w-12" />
               </div>
-              <h3 className="text-xl font-bold mb-2 silver-gradient bg-clip-text text-transparent">{founder.name}</h3>
+              <h3 className="text-xl font-bold mb-2 text-foreground">{founder.name}</h3>
               <p className="text-muted-foreground">{founder.role}</p>
             </CardContent>
           </Card>
@@ -195,7 +187,7 @@ const Home = () => {
         {/* Founder's Vision */}
         <div className="max-w-4xl mx-auto">
           <div className="liquid-glass rounded-2xl p-8 md:p-12 perspective-card">
-            <h3 className="text-2xl font-bold mb-6 text-center silver-gradient bg-clip-text text-transparent">Founder's Vision</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center text-foreground">Founder's Vision</h3>
             <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic text-center">
               "At MNEX Group, we don't just build technology—we engineer the future. Our mission is to empower innovators, creators, and visionaries to transform bold ideas into reality. Through relentless innovation and collaboration, we're shaping a world where technology and creativity converge to solve tomorrow's challenges today."
             </blockquote>
