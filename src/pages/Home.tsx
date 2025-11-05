@@ -38,7 +38,7 @@ const Home = () => {
 
         <div className="relative container mx-auto px-4 text-center z-10">
           <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 liquid-silver bg-clip-text text-transparent drop-shadow-2xl">
               Engineering the Future of Technology
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -47,13 +47,13 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/subsidiaries">
-                <Button variant="hero" size="lg">
+                <Button variant="hero" size="lg" className="silver-glow">
                   Explore Our Subsidiaries
                   <ArrowRight className="ml-2" />
                 </Button>
               </Link>
               <Link to="/careers">
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" className="liquid-glass">
                   Join Our Innovation Team
                 </Button>
               </Link>
@@ -65,11 +65,13 @@ const Home = () => {
       {/* Intro Section */}
       <section className="py-20 container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg text-foreground leading-relaxed">
-            MNEX Group is a global technology and innovation hub based in the UK. We invest in,
-            incubate, and manage cutting-edge subsidiaries and projects powered by our Research &
-            Development Cell, delivering creative and technological solutions that shape the future.
-          </p>
+          <div className="liquid-glass rounded-2xl p-8 perspective-card floating">
+            <p className="text-lg text-foreground leading-relaxed">
+              MNEX Group is a global technology and innovation hub based in the UK. We invest in,
+              incubate, and manage cutting-edge subsidiaries and projects powered by our Research &
+              Development Cell, delivering creative and technological solutions that shape the future.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -78,24 +80,24 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-primary">MNEX R&D — Powering Innovation</h2>
+              <h2 className="text-4xl font-bold mb-6 silver-gradient bg-clip-text text-transparent">MNEX R&D — Powering Innovation</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 MNEX R&D is the engine behind all subsidiaries, prototyping SaaS platforms, AI
                 solutions, and creative tools. Collaborating with students, engineers, and designers,
                 our R&D Cell ensures MNEX Group remains at the forefront of innovation.
               </p>
               <Link to="/research">
-                <Button variant="accent">
+                <Button variant="accent" className="silver-glow">
                   Join Our Innovation Team
                   <ArrowRight className="ml-2" />
                 </Button>
               </Link>
             </div>
-            <div className="relative">
+            <div className="relative perspective-card">
               <img
                 src={rdLabImage}
                 alt="R&D Laboratory"
-                className="rounded-lg shadow-[var(--shadow-glow)] w-full"
+                className="rounded-lg shadow-[var(--shadow-glow)] w-full liquid-glass p-2"
               />
             </div>
           </div>
@@ -108,11 +110,11 @@ const Home = () => {
           <h2 className="text-4xl font-bold mb-4">Our Subsidiaries — Powered by MNEX Group</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {subsidiaries.map((sub) => (
-            <Card key={sub.name} className="group hover:shadow-[var(--shadow-glow)] transition-all duration-300">
+          {subsidiaries.map((sub, index) => (
+            <Card key={sub.name} className={`group hover:shadow-[var(--shadow-glow)] transition-all duration-300 liquid-glass perspective-card ${index === 0 ? 'floating' : ''}`}>
               <CardContent className="p-8">
-                <div className="mb-4">{sub.icon}</div>
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                <div className="mb-4 silver-glow inline-block p-3 rounded-lg">{sub.icon}</div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:silver-gradient group-hover:bg-clip-text group-hover:text-transparent transition-all">
                   {sub.name}
                 </h3>
                 <p className="text-muted-foreground mb-4">{sub.description}</p>
@@ -171,12 +173,12 @@ const Home = () => {
           <h2 className="text-4xl font-bold mb-4">Leadership</h2>
         </div>
         <div className="max-w-md mx-auto mb-16">
-          <Card className="text-center hover:shadow-[var(--shadow-accent-glow)] transition-all duration-300">
+          <Card className="text-center hover:shadow-[var(--shadow-accent-glow)] transition-all duration-300 liquid-glass perspective-card">
             <CardContent className="p-8">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent mx-auto mb-4 flex items-center justify-center">
-                <Users className="h-12 w-12 text-primary-foreground" />
+              <div className="w-24 h-24 rounded-full silver-glow mx-auto mb-4 flex items-center justify-center">
+                <Users className="h-12 w-12" />
               </div>
-              <h3 className="text-xl font-bold mb-2">{founder.name}</h3>
+              <h3 className="text-xl font-bold mb-2 silver-gradient bg-clip-text text-transparent">{founder.name}</h3>
               <p className="text-muted-foreground">{founder.role}</p>
             </CardContent>
           </Card>
@@ -184,8 +186,8 @@ const Home = () => {
         
         {/* Founder's Vision */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8 md:p-12 border border-primary/20">
-            <h3 className="text-2xl font-bold mb-6 text-center text-accent">Founder's Vision</h3>
+          <div className="liquid-glass rounded-2xl p-8 md:p-12 perspective-card">
+            <h3 className="text-2xl font-bold mb-6 text-center silver-gradient bg-clip-text text-transparent">Founder's Vision</h3>
             <blockquote className="text-lg md:text-xl text-foreground leading-relaxed italic text-center">
               "At MNEX Group, we don't just build technology—we engineer the future. Our mission is to empower innovators, creators, and visionaries to transform bold ideas into reality. Through relentless innovation and collaboration, we're shaping a world where technology and creativity converge to solve tomorrow's challenges today."
             </blockquote>
